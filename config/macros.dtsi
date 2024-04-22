@@ -1,3 +1,9 @@
+macro_windowallwindow: macro_windowallwindow{
+compatible = "zmk,behavior-macro";
+label = "macro_windowallwindow";
+#binding-cells = <0>;
+bindings = <&kt LEFT_GUI>, <&kp TAB>, <&kt LEFT_GUI>;
+};
 macro_macspotlight: macro_macspotlight{
 compatible = "zmk,behavior-macro";
 label = "macro_macspotlight";
