@@ -1,6 +1,6 @@
-macro_macro_changlang: macro_macro_changlang{
+macro_changelang: macro_changelang{
 compatible = "zmk,behavior-macro";
-label = "macro_macro_changlang";
+label = "macro_changelang";
 #binding-cells = <0>;
 bindings = <&kt LEFT_GUI>, <&kp SPACE>, <&kt LEFT_GUI>;
 };
