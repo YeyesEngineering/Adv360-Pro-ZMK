@@ -25,7 +25,13 @@
         Lang_change: Lang_change {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_WIN>, <&macro_press>, <&kp SPACE>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_WIN>,
+                <&macro_tap>,
+                <&kp SPACE>,
+                <&macro_release>,
+                <&kp LEFT_WIN>;
 
             label = "LANG_CHANGE";
             tap-ms = <0>;
