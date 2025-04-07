@@ -32,12 +32,19 @@
     };
 
     macros {
-        Lang_change: Lang_change {
+        win_Lang_change: Lang_change {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LG(SPACE)>;
             label = "LANG_CHANGE";
             tap-ms = <0>;
+        };
+
+        win_Quick_search: win_Quick_search {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LS(F))>;
+            label = "WIN_QUICK_SEARCH";
         };
     };
 
