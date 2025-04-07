@@ -47,11 +47,12 @@
             label = "WIN_QUICK_SEARCH";
         };
 
-        all_obsidian: all_obsidian {
+        mac_Voice_dictation: mac_Voice_dictation {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none>;
-            label = "ALL_OBSIDIAN";
+            bindings = <&kp RIGHT_CONTROL>, <&macro_press>, <&kp>;
+
+            label = "MAC_VOICE_DICTATION";
         };
     };
 
