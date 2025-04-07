@@ -46,6 +46,13 @@
             bindings = <&kp LC(LS(F))>;
             label = "WIN_QUICK_SEARCH";
         };
+
+        all_obsidian: all_obsidian {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none>;
+            label = "ALL_OBSIDIAN";
+        };
     };
 
     keymap {
@@ -54,11 +61,11 @@
         window_layer {
             display-name = "Base";
             bindings = <
-&kp EQUAL  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &tog 1                                                             &mo 4            &kp N6  &kp N7  &kp N8     &kp N9    &kp N0    &kp MINUS
-&kp TAB    &kp Q      &kp W     &kp E     &kp R      &kp T   &kp LG(SPACE)                                                      &kp C_VOLUME_UP  &kp Y   &kp U   &kp I      &kp O     &kp P     &kp BSLH
-&kp ESC    &kp A      &kp S     &kp D     &kp F      &kp G   &kp C_PP       &kp LCTRL       &kp LALT      &kp LGUI   &kp RCTRL  &kp C_VOL_DN     &kp H   &kp J   &kp K      &kp L     &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z      &kp X     &kp C     &kp V      &kp B                                  &kp HOME      &kp PG_UP                              &kp N   &kp M   &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
-&mo 2      &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &kp BSPC       &kp LEFT_SHIFT  &kp END       &kp PG_DN  &kp ENTER  &kp SPACE                &kp UP  &kp DOWN   &kp LBKT  &kp RBKT  &mo 2
+&kp EQUAL  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &tog 1                                                                &mo 4            &kp N6  &kp N7  &kp N8     &kp N9    &kp N0    &kp MINUS
+&kp TAB    &kp Q      &kp W     &kp E     &kp R      &kp T   &win_Lang_change                                                      &kp C_VOLUME_UP  &kp Y   &kp U   &kp I      &kp O     &kp P     &kp BSLH
+&kp ESC    &kp A      &kp S     &kp D     &kp F      &kp G   &kp C_PP          &kp LCTRL       &kp LALT      &kp LGUI   &kp RCTRL  &kp C_VOL_DN     &kp H   &kp J   &kp K      &kp L     &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z      &kp X     &kp C     &kp V      &kp B                                     &kp HOME      &kp PG_UP                              &kp N   &kp M   &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
+&mo 3      &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &kp BSPC          &kp LEFT_SHIFT  &kp END       &kp PG_DN  &kp ENTER  &kp SPACE                &kp UP  &kp DOWN   &kp LBKT  &kp RBKT  &mo 3
             >;
         };
 
@@ -69,18 +76,7 @@
 &kp TAB    &kp Q      &kp W     &kp E     &kp R      &kp T   &kp C_AC_NEXT_KEYBOARD_LAYOUT_SELECT                                                                    &kp C_VOLUME_UP  &kp Y   &kp U   &kp I      &kp O     &kp P     &kp BSLH
 &kp ESC    &kp A      &kp S     &kp D     &kp F      &kp G   &kp C_PP                              &kp LEFT_COMMAND  &kp LEFT_CONTROL      &kp RIGHT_ALT  &kp RCTRL  &kp C_VOL_DN     &kp H   &kp J   &kp K      &kp L     &kp SEMI  &kp SQT
 &kp LSHFT  &kp Z      &kp X     &kp C     &kp V      &kp B                                                           &kp HOME              &kp PG_UP                                  &kp N   &kp M   &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
-&mo 3      &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &kp BSPC                              &kp LEFT_SHIFT    &kp END               &kp PG_DN      &kp ENTER  &kp SPACE                &kp UP  &kp DOWN   &kp LBKT  &kp RBKT  &mo 3
-            >;
-        };
-
-        window_fn {
-            display-name = "Fn";
-            bindings = <
-&kp F1         &kp F2        &kp F3       &kp F4           &kp F5  &kp F6            &tog 0                                          &mo 4   &kp F7      &kp F8    &kp F9      &kp F10     &kp F11       &kp F12
-&kp C_BRI_DEC  &kp C_BRI_UP  &kp LG(TAB)  &kp C_AC_SEARCH  &none   &kp C_SLEEP_MODE  &none                                           &none   &kp C_PREV  &kp C_PP  &kp C_NEXT  &kp C_MUTE  &kp C_VOL_DN  &kp C_VOLUME_UP
-&trans         &trans        &trans       &trans           &trans  &trans            &none       &trans  &trans      &trans  &trans  &none   &trans      &trans    &trans      &trans      &trans        &trans
-&trans         &trans        &trans       &trans           &trans  &trans                                &trans      &trans                  &trans      &trans    &trans      &trans      &trans        &trans
-&trans         &trans        &trans       &trans           &trans                    &kp DELETE  &trans  &trans      &trans  &trans  &trans              &trans    &trans      &trans      &trans        &trans
+&mo 2      &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &kp BSPC                              &kp LEFT_SHIFT    &kp END               &kp PG_DN      &kp ENTER  &kp SPACE                &kp UP  &kp DOWN   &kp LBKT  &kp RBKT  &mo 2
             >;
         };
 
@@ -92,6 +88,17 @@
 &trans         &trans        &trans                                 &trans           &trans  &trans            &none       &trans  &trans      &trans  &trans  &none   &trans      &trans    &trans      &trans      &trans        &trans
 &trans         &trans        &trans                                 &trans           &trans  &trans                                &trans      &trans                  &trans      &trans    &trans      &trans      &trans        &trans
 &trans         &trans        &trans                                 &trans           &trans                    &kp DELETE  &trans  &trans      &trans  &trans  &trans              &trans    &trans      &trans      &trans        &trans
+            >;
+        };
+
+        window_fn {
+            display-name = "Fn";
+            bindings = <
+&kp F1         &kp F2        &kp F3       &kp F4             &kp F5  &kp F6            &tog 0                                          &mo 4   &kp F7      &kp F8    &kp F9      &kp F10     &kp F11       &kp F12
+&kp C_BRI_DEC  &kp C_BRI_UP  &kp LG(TAB)  &win_Quick_search  &none   &kp C_SLEEP_MODE  &none                                           &none   &kp C_PREV  &kp C_PP  &kp C_NEXT  &kp C_MUTE  &kp C_VOL_DN  &kp C_VOLUME_UP
+&trans         &trans        &trans       &trans             &trans  &trans            &none       &trans  &trans      &trans  &trans  &none   &trans      &trans    &trans      &trans      &trans        &trans
+&trans         &trans        &trans       &trans             &trans  &trans                                &trans      &trans                  &trans      &trans    &trans      &trans      &trans        &trans
+&trans         &trans        &trans       &trans             &trans                    &kp DELETE  &trans  &trans      &trans  &trans  &trans              &trans    &trans      &trans      &trans        &trans
             >;
         };
 
