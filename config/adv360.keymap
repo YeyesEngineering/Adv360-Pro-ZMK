@@ -124,11 +124,11 @@
         mac_fn {
             display-name = "Fn";
             bindings = <
-&kp F1         &kp F2        &kp F3                                 &kp F4           &kp F5                &kp F6            &tog 0                                                                                       &mo 4              &kp F7      &kp F8      &kp F9        &kp F10     &kp F11       &kp F12
-&kp C_BRI_DEC  &kp C_BRI_UP  &kp LG(C_AC_DESKTOP_SHOW_ALL_WINDOWS)  &kp C_AC_SEARCH  &mac_Voice_dictation  &kp C_SLEEP_MODE  &kp C_AC_DESKTOP_SHOW_ALL_APPLICATIONS                                                       &mac_Task_manager  &kp C_PREV  &kp C_PP    &kp C_NEXT    &kp C_MUTE  &kp C_VOL_DN  &kp C_VOLUME_UP
-&trans         &trans        &trans                                 &trans           &trans                &trans            &none                                   &mac_Open_finder  &mac_Capture      &trans  &trans   &none              &trans      &trans      &trans        &trans      &trans        &trans
-&trans         &trans        &trans                                 &trans           &trans                &trans                                                                      &trans            &trans                              &trans      &trans      &trans        &trans      &trans        &trans
-&trans         &trans        &trans                                 &kp LC(LEFT)     &kp LC(RIGHT)                           &kp DELETE                              &trans            &trans            &trans  &kp INS  &kp LG(LS(P))                  &kp LC(UP)  &kp LC(DOWN)  &trans      &trans        &trans
+&kp F1         &kp F2        &kp F3                             &kp F4         &kp F5         &kp F6  &tog 0                                                           &mo 4              &kp F7      &kp F8      &kp F9        &kp F10     &kp F11       &kp F12
+&kp C_BRI_DEC  &kp C_BRI_UP  &kp C_AC_DESKTOP_SHOW_ALL_WINDOWS  &kp LG(SPACE)  &trans         &trans  &trans                                                           &mac_Task_manager  &kp C_PREV  &kp C_PP    &kp C_NEXT    &kp C_MUTE  &kp C_VOL_DN  &kp C_VOLUME_UP
+&trans         &trans        &trans                             &trans         &trans         &trans  &none       &mac_Open_finder  &mac_Capture      &trans  &trans   &none              &trans      &trans      &trans        &trans      &trans        &trans
+&trans         &trans        &trans                             &trans         &trans         &trans                                &trans            &trans                              &trans      &trans      &trans        &trans      &trans        &trans
+&trans         &trans        &trans                             &kp LC(LEFT)   &kp LC(RIGHT)          &kp DELETE  &trans            &trans            &trans  &kp INS  &kp LG(LS(P))                  &kp LC(UP)  &kp LC(DOWN)  &trans      &trans        &trans
             >;
         };
 
